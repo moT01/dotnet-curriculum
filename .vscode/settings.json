@@ -24,7 +24,8 @@
     "package-lock.json": false,
     "LICENSE": false,
     "README.md": false,
-    "learn-dotnet": false
+    "learn-dotnet": false,
+    "dotnet-install.sh": false
   },
   "terminal.integrated.profiles.linux": {
     "bash": {
