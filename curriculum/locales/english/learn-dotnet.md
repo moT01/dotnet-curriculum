@@ -1,4 +1,4 @@
-# Learn .NET
+# .NET Curriculum
 
 ## 1
 
