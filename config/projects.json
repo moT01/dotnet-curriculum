@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "title": "Learn .NET",
+    "dashedName": "learn-dotnet",
+    "isIntegrated": false,
+    "description": "In this course, you will learn .NET!",
+    "isPublic": true,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  }
+]
