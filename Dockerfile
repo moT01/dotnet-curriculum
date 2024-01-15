@@ -2,7 +2,12 @@ FROM ubuntu:20.04
 
 ARG USERNAME=camper
 ARG REPO_NAME=dotnet-curriculum
+
+RUN mkdir /workspace
+
 ARG HOMEDIR=/workspace/$REPO_NAME
+
+RUN mkdir /workspace/${REPO_NAME}
 
 ENV TZ="America/New_York"
 
