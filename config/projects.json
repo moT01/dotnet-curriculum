@@ -1,10 +1,10 @@
 [
   {
     "id": 0,
-    "title": "Learn .NET",
-    "dashedName": "learn-dotnet",
+    "title": "Introduction to ASP.NET Core Development",
+    "dashedName": "introduction-to-asp-dotnet-core-development",
     "isIntegrated": false,
-    "description": "In this course, you will learn .NET!",
+    "description": "This course shows you the .NET CLI development tools and walks you through creating your first ASP.NET Core app.",
     "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
