@@ -70,7 +70,7 @@ You should run `dotnet new list` in the terminal
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
-assert.match(lastCommand, /^\s*dotnet new --help/);
+assert.match(lastCommand, /^\s*dotnet new list/);
 ```
 
 ## 5
@@ -142,7 +142,7 @@ assert.include(cwd, 'my-first-app');
 
 ### --description--
 
-In the file explorer, expand the `my-first-app` folder to view the files that were created from the template. Find and open the `Program.cs` file to see the server code, then run `dotnet run` in the termial to run the program.
+In the file explorer, expand the `my-first-app` folder to view the files that were created from the template. Find and open the `Program.cs` file to see the server code, then run `dotnet run` in the termial to run the program. Open the browser to the port to see your app running. When you are done, press `ctrl+c` in the terminal to close your app.
 
 ### --tests--
 
@@ -151,14 +151,16 @@ You should run `dotnet run` in the terminal from the `my-first-app` folder
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
+const terminalOut = await __helpers.getTerminalOutput();
 assert.match(lastCommand, /^\s*dotnet run/);
+assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
 ## 9
 
 ### --description--
 
-Open the browser to the port to see your app running. When you are done, change the endpoint in `Program.cs` to `/api/hello` instead of `/`.
+In the `Program.cs` file, change the endpoint to `/api/hello` instead of `/`.
 
 ### --tests--
 
@@ -174,7 +176,7 @@ assert.match(fileContents, /api\/hello/);
 
 ### --description--
 
-If your program is still running in the terminal, close it with `ctrl+c` and run `dotnet run` again to run the new code. After it's running, go to your app in the browser and add `/api/hello` to the domain to see the endpoint.
+Run `dotnet run` again to run the new code. After it's running, go to your app in the browser and add `/api/hello` to the domain to see the endpoint. When you are done, press `ctrl+c` in the terminal to close your app.
 
 ### --tests--
 
@@ -183,7 +185,9 @@ You should run `dotnet run` in the terminal from the `my-first-app` folder
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
+const terminalOut = await __helpers.getTerminalOutput();
 assert.match(lastCommand, /^\s*dotnet run/);
+assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
 ## 11
@@ -372,7 +376,7 @@ assert.match(fileContents, /app.MapRazorPages();/);
 
 ### --description--
 
-If your app is still running in the terminal, close it and run it again to get the new changes. Open the app in the browser to see the home page.
+Run the app again to start the new changes. Then, open the app in the browser to see the home page. When you are done, press `ctrl+c` in the terminal to close the app.
 
 ### --tests--
 
@@ -381,7 +385,9 @@ You should run `dotnet run` in the terminal from the `my-first-app` folder
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
+const terminalOut = await __helpers.getTerminalOutput();
 assert.match(lastCommand, /^\s*dotnet run/);
+assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
 ## 23
@@ -522,7 +528,7 @@ assert.match(fileContents, /public class AboutModel : PageModel {}/);
 
 ### --description--
 
-Close your app if it's running and run it again. Open the browser to your app and visit the `/about` page.
+Run your app again and then open the app in the browser and visit the `/about` page. When you are done, press `ctrl+c` in the terminal to close the app.
 
 ### --tests--
 
@@ -531,7 +537,9 @@ You should run `dotnet run` in the terminal from the `my-first-app` folder
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
+const terminalOut = await __helpers.getTerminalOutput();
 assert.match(lastCommand, /^\s*dotnet run/);
+assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
 ## 32
@@ -636,7 +644,7 @@ assert.match(fileContents, /Layout = "_Layout";/);
 
 ### --description--
 
-Close your app and run it again. Then, open it in the browser to see the changes.
+Run your app again. Then open it in the browser and visit your two pages to see the changes. When you are done, press `ctrl+c` in the terminal to close the app.
 
 ### --tests--
 
@@ -645,7 +653,9 @@ You should run `dotnet run` in the terminal from the `my-first-app` folder
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const lastCommand = await __helpers.getLastCommand();
+const terminalOut = await __helpers.getTerminalOutput();
 assert.match(lastCommand, /^\s*dotnet run/);
+assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
 ## --fcc-end--

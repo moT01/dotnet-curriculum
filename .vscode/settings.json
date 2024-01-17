@@ -1,6 +1,6 @@
 {
   "files.exclude": {
-    ".devcontainer": false,
+    ".devcontainer": true,
     ".editorconfig": true,
     ".freeCodeCamp": true,
     ".git": true,
@@ -26,7 +26,8 @@
     "README.md": true,
     "learn-dotnet": true,
     "introduction-to-asp-dotnet-core-development": true,
-    "dotnet-install.sh": true
+    "dotnet-install.sh": true,
+    "update-settings.js": true
   },
   "terminal.integrated.profiles.linux": {
     "bash": {

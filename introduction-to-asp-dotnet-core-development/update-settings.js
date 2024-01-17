@@ -25,9 +25,7 @@ try {
     }
     
     const data = fs.readFileSync(filePath, 'utf8').trim();
-    console.log(data);
     const launchSettings = JSON.parse(data);
-    console.log(launchSettings);
 
     if (launchSettings.iisSettings.iisExpress) {
         launchSettings.iisSettings.iisExpress.applicationUrl = iisUrl;
