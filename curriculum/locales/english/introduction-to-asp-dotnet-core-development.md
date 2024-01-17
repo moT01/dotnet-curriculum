@@ -4,7 +4,7 @@
 
 ### --description--
 
-`cd` into the `learn-dotnet` folder.
+`cd` into the `introduction-to-asp-dotnet-core-development` folder.
 
 ### --tests--
 
@@ -16,13 +16,13 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*cd/);
 ```
 
-You should be in the `learn-dotnet` folder in your terminal
+You should be in the `introduction-to-asp-dotnet-core-development` folder in your terminal
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
 const cwdFile = await __helpers.getCWD();
 const cwd = cwdFile.split('\n').filter(Boolean).pop();
-assert.include(cwd, 'learn-dotnet');
+assert.include(cwd, 'introduction-to-asp-dotnet-core-development');
 ```
 
 ## 2

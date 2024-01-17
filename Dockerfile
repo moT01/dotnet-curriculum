@@ -29,7 +29,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> \
   /etc/sudoers
 
 # Install packages for projects
-RUN sudo apt-get install -y curl git bash-completion man-db firefox wget nano
+RUN sudo apt-get install -y curl git bash-completion man-db firefox wget nano vim
 
 # Install Node LTS
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
