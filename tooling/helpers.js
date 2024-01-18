@@ -1,7 +1,7 @@
 import { ROOT } from '@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/env.js';
 import { readFile, readdir } from 'fs/promises';
 import { Babeliser } from 'babeliser';
-import join from 'path';
+import { join } from 'path';
 
 export async function babeliser(codeString) {
   return new Babeliser(codeString);
