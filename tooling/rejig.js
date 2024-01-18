@@ -8,7 +8,7 @@ const PATH =
  */
 async function rejig() {
   const file = await readFile(PATH, 'utf-8');
-  let lessonNumber = 0;
+  let lessonNumber = -1;
   const newFile = file.replace(/## \d+/g, () => {
     lessonNumber++;
     return `## ${lessonNumber}`;

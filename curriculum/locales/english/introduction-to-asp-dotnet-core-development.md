@@ -1,6 +1,6 @@
 # .NET - Introduction to ASP.NET Core Development
 
-## 1
+## 0
 
 ### --description--
 
@@ -25,7 +25,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'introduction-to-asp-dotnet-core-development');
 ```
 
-## 2
+## 1
 
 ### --description--
 
@@ -41,7 +41,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet --version/);
 ```
 
-## 3
+## 2
 
 ### --description--
 
@@ -57,7 +57,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet --help/);
 ```
 
-## 4
+## 3
 
 ### --description--
 
@@ -73,7 +73,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet new list/);
 ```
 
-## 5
+## 4
 
 ### --description--
 
@@ -93,11 +93,13 @@ You should have a `my-first-app` folder in the `introduction-to-asp-dotnet-core-
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development'
+);
 assert.include(folder, 'my-first-app');
 ```
 
-## 6
+## 5
 
 ### --description--
 
@@ -113,7 +115,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^node update-settings\.js/);
 ```
 
-## 7
+## 6
 
 ### --description--
 
@@ -138,7 +140,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'my-first-app');
 ```
 
-## 8
+## 7
 
 ### --description--
 
@@ -156,7 +158,7 @@ assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
-## 9
+## 8
 
 ### --description--
 
@@ -168,11 +170,13 @@ Your endpoint should point to `/api/hello`.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Program.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Program.cs'
+);
 assert.match(fileContents, /api\/hello/);
 ```
 
-## 10
+## 9
 
 ### --description--
 
@@ -190,7 +194,7 @@ assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
-## 11
+## 10
 
 ### --description--
 
@@ -202,11 +206,13 @@ You should have a `Pages` folder in the `my-first-app` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app'
+);
 assert.include(folder, 'Pages');
 ```
 
-## 12
+## 11
 
 ### --description--
 
@@ -218,11 +224,13 @@ You should have an `Index.cshtml` folder in the `Pages` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages'
+);
 assert.include(folder, 'Index.cshtml');
 ```
 
-## 13
+## 12
 
 ### --description--
 
@@ -234,11 +242,13 @@ You should have `@page` at the top of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /@page/);
 ```
 
-## 14
+## 13
 
 ### --description--
 
@@ -250,11 +260,13 @@ You should have `@model IndexModel` at the bottom of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /@model IndexModel/);
 ```
 
-## 15
+## 14
 
 ### --description--
 
@@ -272,11 +284,13 @@ You should have the suggested code at the bottom of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /@{\s*ViewData["Title"] = "Home";\s*}/);
 ```
 
-## 16
+## 15
 
 ### --description--
 
@@ -288,11 +302,13 @@ You should have the suggested code at the bottom of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /<p>This is the @ViewData["Title"] page.<\/p>/);
 ```
 
-## 17
+## 16
 
 ### --description--
 
@@ -304,11 +320,13 @@ You should have an `Index.cshtml.cs` folder in the `Pages` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages'
+);
 assert.include(folder, 'Index.cshtml.cs');
 ```
 
-## 18
+## 17
 
 ### --description--
 
@@ -320,11 +338,13 @@ You should have ``using Microsoft.AspNetCore.Mvc.RazorPages;` in your `Index.csh
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml.cs'
+);
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 19
+## 18
 
 ### --description--
 
@@ -336,11 +356,13 @@ You should have `public class IndexModel : PageModel {}` at the bottom of your `
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml.cs'
+);
 assert.match(fileContents, /public class IndexModel : PageModel {}/);
 ```
 
-## 20
+## 19
 
 ### --description--
 
@@ -352,11 +374,13 @@ You should have `builder.Services.AddRazorPages();` in your `Program.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Program.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Program.cs'
+);
 assert.match(fileContents, /builder.Services.AddRazorPages();/);
 ```
 
-## 21
+## 20
 
 ### --description--
 
@@ -368,11 +392,13 @@ You should have `app.MapRazorPages();` in your `Program.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Program.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Program.cs'
+);
 assert.match(fileContents, /app.MapRazorPages();/);
 ```
 
-## 22
+## 21
 
 ### --description--
 
@@ -390,7 +416,7 @@ assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
-## 23
+## 22
 
 ### --description--
 
@@ -402,11 +428,13 @@ You should have an `About.cshtml` folder in the `Pages` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages'
+);
 assert.include(folder, 'About.cshtml');
 ```
 
-## 24
+## 23
 
 ### --description--
 
@@ -418,11 +446,13 @@ You should have `@page` at the top of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /@page/);
 ```
 
-## 25
+## 24
 
 ### --description--
 
@@ -434,11 +464,13 @@ You should have `@model AboutModel` at the bottom of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /@model AboutModel/);
 ```
 
-## 26
+## 25
 
 ### --description--
 
@@ -456,11 +488,13 @@ You should have the suggested code at the bottom of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /@{\s*ViewData["Title"] = "About";\s*}/);
 ```
 
-## 27
+## 26
 
 ### --description--
 
@@ -472,11 +506,13 @@ You should have the suggested code at the bottom of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /<p>This is the @ViewData["Title"] page.<\/p>/);
 ```
 
-## 28
+## 27
 
 ### --description--
 
@@ -488,11 +524,13 @@ You should have an `About.cshtml.cs` folder in the `Pages` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages'
+);
 assert.include(folder, 'About.cshtml.cs');
 ```
 
-## 29
+## 28
 
 ### --description--
 
@@ -504,11 +542,13 @@ You should have ``using Microsoft.AspNetCore.Mvc.RazorPages;` in your `About.csh
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml.cs'
+);
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 30
+## 29
 
 ### --description--
 
@@ -520,11 +560,13 @@ You should have `public class AboutModel : PageModel {}` at the bottom of your `
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml.cs'
+);
 assert.match(fileContents, /public class AboutModel : PageModel {}/);
 ```
 
-## 31
+## 30
 
 ### --description--
 
@@ -542,7 +584,7 @@ assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
-## 32
+## 31
 
 ### --description--
 
@@ -554,11 +596,13 @@ You should have an `Shared` folder in the `Pages` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages'
+);
 assert.include(folder, 'Shared');
 ```
 
-## 33
+## 32
 
 ### --description--
 
@@ -570,11 +614,13 @@ You should have an `_Layout.cshtml` folder in the `Shared` folder
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Shared');
+const folder = await __helpers.getDirectory(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Shared'
+);
 assert.include(folder, '_Layout.cshtml');
 ```
 
-## 34
+## 33
 
 ### --description--
 
@@ -583,18 +629,16 @@ Add this HTML boilerplate to the file:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>@ViewData["Title"] | My First App</title>
-</head>
-<body>
-  <header>
-    <h1>Welcome to your ASP.NET Core app!</h1>
-  </header>
-    
-  <main>
-    @RenderBody()
-  </main>
-</body>
+  <head>
+    <title>@ViewData["Title"] | My First App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to your ASP.NET Core app!</h1>
+    </header>
+
+    <main>@RenderBody()</main>
+  </body>
 </html>
 ```
 
@@ -604,11 +648,13 @@ You should have the suggested code in your `_Layout.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Shared/_Layout.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Shared/_Layout.cshtml'
+);
 assert.match(fileContents, /<!DOCTYPE html>/);
 ```
 
-## 35
+## 34
 
 ### --description--
 
@@ -620,11 +666,13 @@ You should have `Layout = "_Layout";` in the `@` code block of your `Index.cshtm
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 36
+## 35
 
 ### --description--
 
@@ -636,11 +684,13 @@ You should have `Layout = "_Layout";` in the `@` code block of your `About.cshtm
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 37
+## 36
 
 ### --description--
 

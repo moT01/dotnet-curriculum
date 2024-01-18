@@ -1,6 +1,6 @@
 {
-  "path": ".",
   "version": "0.0.1",
+  "prepare": "cd ./node_modules/@freecodecamp/freecodecamp-os/ && npm run build:client",
   "scripts": {
     "develop-course": "NODE_ENV=development node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js",
     "run-course": "NODE_ENV=production node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js",
@@ -15,6 +15,7 @@
     }
   },
   "workspace": {
+    "autoStart": true,
     "previews": [
       {
         "open": true,
@@ -29,10 +30,6 @@
     "sourcerer.sh": "./bash/sourcerer.sh"
   },
   "client": {
-    "assets": {
-      "header": "./client/assets/fcc_primary_large.svg",
-      "favicon": "./client/assets/fcc_primary_small.svg"
-    },
     "landing": {
       "description": "Learn .NET!",
       "faq-link": "#",
@@ -49,6 +46,7 @@
     }
   },
   "tooling": {
-    "helpers": "./tooling/helpers.js"
+    "helpers": "./tooling/helpers.js",
+    "plugins": "./tooling/plugins.js"
   }
 }
