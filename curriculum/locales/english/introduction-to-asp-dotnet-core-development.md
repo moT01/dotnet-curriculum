@@ -240,22 +240,6 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@page/);
 ```
 
-## 14
-
-### --description--
-
-Below that, add `@model IndexModel`.
-
-### --tests--
-
-You should have `@model IndexModel` at the bottom of your `Index.cshtml` file.
-
-```js
-await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
-assert.match(fileContents, /@model IndexModel/);
-```
-
 ## 15
 
 ### --description--
@@ -318,7 +302,7 @@ At the top of your new file, add `using Microsoft.AspNetCore.Mvc.RazorPages;`
 
 ### --tests--
 
-You should have ``using Microsoft.AspNetCore.Mvc.RazorPages;` in your `Index.cshtml.cs` file.
+You should have `using Microsoft.AspNetCore.Mvc.RazorPages;` in your `Index.cshtml.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
@@ -424,22 +408,6 @@ You should have `@page` at the top of your `About.cshtml` file.
 await new Promise(res => setTimeout(res, 1000));
 const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
 assert.match(fileContents, /@page/);
-```
-
-## 25
-
-### --description--
-
-Below that, add `@model AboutModel`.
-
-### --tests--
-
-You should have `@model AboutModel` at the bottom of your `About.cshtml` file.
-
-```js
-await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
-assert.match(fileContents, /@model AboutModel/);
 ```
 
 ## 26
