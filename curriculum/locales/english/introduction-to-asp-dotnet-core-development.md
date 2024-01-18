@@ -1,6 +1,6 @@
 # .NET - Introduction to ASP.NET Core Development
 
-## 1
+## 0
 
 ### --description--
 
@@ -25,7 +25,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'introduction-to-asp-dotnet-core-development');
 ```
 
-## 2
+## 1
 
 ### --description--
 
@@ -41,7 +41,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet --version/);
 ```
 
-## 3
+## 2
 
 ### --description--
 
@@ -57,7 +57,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet --help/);
 ```
 
-## 4
+## 3
 
 ### --description--
 
@@ -73,7 +73,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^\s*dotnet new list/);
 ```
 
-## 5
+## 4
 
 ### --description--
 
@@ -97,7 +97,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'my-first-app');
 ```
 
-## 6
+## 5
 
 ### --description--
 
@@ -113,7 +113,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.match(lastCommand, /^node update-settings\.js/);
 ```
 
-## 7
+## 6
 
 ### --description--
 
@@ -138,7 +138,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'my-first-app');
 ```
 
-## 8
+## 7
 
 ### --description--
 
@@ -156,7 +156,7 @@ assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
 ```
 
-## 9
+## 8
 
 ### --description--
 
@@ -172,7 +172,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /api\/hello/);
 ```
 
-## 10
+## 9
 
 ### --description--
 
@@ -192,7 +192,7 @@ assert.match(terminalOut, /Application is shutting down...\s*$/);
 assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
 ```
 
-## 11
+## 10
 
 ### --description--
 
@@ -208,7 +208,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'Pages');
 ```
 
-## 12
+## 11
 
 ### --description--
 
@@ -224,7 +224,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'Index.cshtml');
 ```
 
-## 13
+## 12
 
 ### --description--
 
@@ -240,7 +240,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@page/);
 ```
 
-## 15
+## 13
 
 ### --description--
 
@@ -262,7 +262,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "Home";\s*}/);
 ```
 
-## 16
+## 14
 
 ### --description--
 
@@ -278,7 +278,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
-## 17
+## 15
 
 ### --description--
 
@@ -294,7 +294,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'Index.cshtml.cs');
 ```
 
-## 18
+## 16
 
 ### --description--
 
@@ -310,7 +310,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 19
+## 17
 
 ### --description--
 
@@ -326,7 +326,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /public class IndexModel : PageModel {}/);
 ```
 
-## 20
+## 18
 
 ### --description--
 
@@ -342,7 +342,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /builder\.Services\.AddRazorPages\(\);/);
 ```
 
-## 21
+## 19
 
 ### --description--
 
@@ -358,7 +358,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /app\.MapRazorPages\(\);/);
 ```
 
-## 22
+## 20
 
 ### --description--
 
@@ -378,7 +378,7 @@ assert.match(terminalOut, /Application is shutting down...\s*$/);
 assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
 ```
 
-## 23
+## 21
 
 ### --description--
 
@@ -394,7 +394,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'About.cshtml');
 ```
 
-## 24
+## 22
 
 ### --description--
 
@@ -410,7 +410,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@page/);
 ```
 
-## 26
+## 23
 
 ### --description--
 
@@ -432,7 +432,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "About";\s*}/);
 ```
 
-## 27
+## 24
 
 ### --description--
 
@@ -448,7 +448,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
-## 28
+## 25
 
 ### --description--
 
@@ -464,7 +464,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'About.cshtml.cs');
 ```
 
-## 29
+## 26
 
 ### --description--
 
@@ -480,7 +480,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 30
+## 27
 
 ### --description--
 
@@ -496,7 +496,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /public class AboutModel : PageModel {}/);
 ```
 
-## 31
+## 28
 
 ### --description--
 
@@ -516,7 +516,7 @@ assert.match(terminalOut, /Application is shutting down...\s*$/);
 assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
 ```
 
-## 32
+## 29
 
 ### --description--
 
@@ -532,7 +532,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, 'Shared');
 ```
 
-## 33
+## 30
 
 ### --description--
 
@@ -548,7 +548,7 @@ const folder = await __helpers.getDirectory('introduction-to-asp-dotnet-core-dev
 assert.include(folder, '_Layout.cshtml');
 ```
 
-## 34
+## 31
 
 ### --description--
 
@@ -583,7 +583,7 @@ assert.match(fileContents, /<!DOCTYPE html>/);
 assert.match(fileContents, /@RenderBody\(\)/);
 ```
 
-## 35
+## 32
 
 ### --description--
 
@@ -599,7 +599,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 36
+## 33
 
 ### --description--
 
@@ -615,7 +615,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 37
+## 34
 
 ### --description--
 
