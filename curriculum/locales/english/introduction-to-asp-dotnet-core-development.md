@@ -494,7 +494,7 @@ Add `using Microsoft.AspNetCore.Mvc.RazorPages;` at the top of the new file.
 
 ### --tests--
 
-You should have ``using Microsoft.AspNetCore.Mvc.RazorPages;` in your `About.cshtml.cs` file.
+You should have `using Microsoft.AspNetCore.Mvc.RazorPages;` in your `About.cshtml.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
