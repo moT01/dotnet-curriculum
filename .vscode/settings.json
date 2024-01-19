@@ -27,8 +27,11 @@
     "learn-dotnet": true,
     "introduction-to-asp-dotnet-core-development": true,
     "dotnet-install.sh": true,
-    "update-settings.js": true
+    "*/update-settings.js": true
   },
+  "window.commandCenter": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "bash",

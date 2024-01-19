@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 
 const PATH =
-  '../curriculum/locales/english/introduction-to-asp-dotnet-core-development.md';
+  './curriculum/locales/english/introduction-to-asp-dotnet-core-development.md';
 
 /**
  * Ensures all lessons are incremented by 1
