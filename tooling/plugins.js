@@ -1,6 +1,6 @@
 import { pluginEvents } from '@freecodecamp/freecodecamp-os/.freeCodeCamp/plugin/index.js';
 import { ROOT } from '@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/env.js';
-import { readFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 
 pluginEvents.onTestsStart = async (project, testsState) => {
