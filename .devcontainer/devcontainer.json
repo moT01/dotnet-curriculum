@@ -8,9 +8,7 @@
       ]
     }
   },
-  "forwardPorts": [
-    8080
-  ],
+  "forwardPorts": [8080],
   "workspaceFolder": "/workspace/dotnet-curriculum",
   "dockerFile": "../Dockerfile",
   "context": ".."

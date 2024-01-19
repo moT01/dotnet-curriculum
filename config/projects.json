@@ -6,8 +6,9 @@
     "isIntegrated": false,
     "description": "This course shows you the .NET CLI development tools and walks you through creating your first ASP.NET Core app.",
     "isPublic": true,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 36
   }
 ]
