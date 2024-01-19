@@ -16,23 +16,28 @@ pluginEvents.onProjectStart = async project => {
 };
 
 pluginEvents.onProjectFinished = async project => {
-  const token = await readFile(join(ROOT, 'config/token.txt'));
-  console.log(`Using ${token} to save progress`);
-
-  // Below is an example. A new endpoint should be created
-  //   await fetch(
-  //     'https://api.freecodecamp.org/challenge/coderoad-challenge-completed',
-  //     {
-  //       method: 'POST',
-  //       headers: {
-  //         'CODEROAD-USER-TOKEN': token
-  //       },
-  //       body: JSON.stringify({
-  //         tutorialId: project.dashedName
-  //       })
-  //     }
-  //   );
   console.log('onProjectFinished');
+
+  const dir = await readdir(join(ROOT, 'config'));
+
+  if (dir.includes('token.txt')) {
+    const token = await readFile(join(ROOT, 'config/token.txt'));
+    console.log(`Using ${token} to save progress`);
+
+    // Below is an example. A new endpoint should be created
+    //   await fetch(
+    //     'https://api.freecodecamp.org/challenge/coderoad-challenge-completed',
+    //     {
+    //       method: 'POST',
+    //       headers: {
+    //         'CODEROAD-USER-TOKEN': token
+    //       },
+    //       body: JSON.stringify({
+    //         tutorialId: project.dashedName
+    //       })
+    //     }
+    //   );
+  }
 };
 
 pluginEvents.onLessonFailed = async project => {

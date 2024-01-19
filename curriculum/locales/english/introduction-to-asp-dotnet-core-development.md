@@ -254,24 +254,6 @@ assert.match(fileContents, /@page/);
 
 ### --description--
 
-Below that, add `@model IndexModel`.
-
-### --tests--
-
-You should have `@model IndexModel` at the bottom of your `Index.cshtml` file.
-
-```js
-await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile(
-  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
-);
-assert.match(fileContents, /@model IndexModel/);
-```
-
-## 14
-
-### --description--
-
 Add the code below at the bottom of the file:
 
 ```cs
@@ -290,7 +272,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "Home";\s*}/);
 ```
 
-## 15
+## 14
 
 ### --description--
 
@@ -306,7 +288,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
-## 16
+## 15
 
 ### --description--
 
@@ -324,7 +306,7 @@ const folder = await __helpers.getDirectory(
 assert.include(folder, 'Index.cshtml.cs');
 ```
 
-## 17
+## 16
 
 ### --description--
 
@@ -342,7 +324,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 18
+## 17
 
 ### --description--
 
@@ -360,7 +342,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /public class IndexModel : PageModel {}/);
 ```
 
-## 19
+## 18
 
 ### --description--
 
@@ -376,7 +358,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /builder\.Services\.AddRazorPages\(\);/);
 ```
 
-## 20
+## 19
 
 ### --description--
 
@@ -392,7 +374,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /app\.MapRazorPages\(\);/);
 ```
 
-## 21
+## 20
 
 ### --description--
 
@@ -412,7 +394,7 @@ assert.match(terminalOut, /Application is shutting down...\s*$/);
 assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
 ```
 
-## 22
+## 21
 
 ### --description--
 
@@ -430,7 +412,7 @@ const folder = await __helpers.getDirectory(
 assert.include(folder, 'About.cshtml');
 ```
 
-## 23
+## 22
 
 ### --description--
 
@@ -448,7 +430,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /@page/);
 ```
 
-## 24
+## 23
 
 ### --description--
 
@@ -470,7 +452,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "About";\s*}/);
 ```
 
-## 25
+## 24
 
 ### --description--
 
@@ -486,7 +468,7 @@ const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-de
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
-## 26
+## 25
 
 ### --description--
 
@@ -504,7 +486,7 @@ const folder = await __helpers.getDirectory(
 assert.include(folder, 'About.cshtml.cs');
 ```
 
-## 27
+## 26
 
 ### --description--
 
@@ -522,7 +504,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /using Microsoft\.AspNetCore\.Mvc\.RazorPages;/);
 ```
 
-## 28
+## 27
 
 ### --description--
 
@@ -540,7 +522,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /public class AboutModel : PageModel {}/);
 ```
 
-## 29
+## 28
 
 ### --description--
 
@@ -560,7 +542,7 @@ assert.match(terminalOut, /Application is shutting down...\s*$/);
 assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
 ```
 
-## 30
+## 29
 
 ### --description--
 
@@ -578,7 +560,7 @@ const folder = await __helpers.getDirectory(
 assert.include(folder, 'Shared');
 ```
 
-## 31
+## 30
 
 ### --description--
 
@@ -596,7 +578,7 @@ const folder = await __helpers.getDirectory(
 assert.include(folder, '_Layout.cshtml');
 ```
 
-## 32
+## 31
 
 ### --description--
 
@@ -631,7 +613,7 @@ assert.match(fileContents, /<!DOCTYPE html>/);
 assert.match(fileContents, /@RenderBody\(\)/);
 ```
 
-## 33
+## 32
 
 ### --description--
 
@@ -649,7 +631,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 34
+## 33
 
 ### --description--
 
@@ -667,7 +649,7 @@ const fileContents = await __helpers.getFile(
 assert.match(fileContents, /Layout = "_Layout";/);
 ```
 
-## 35
+## 34
 
 ### --description--
 
