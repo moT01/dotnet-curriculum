@@ -7,13 +7,12 @@ const socket = new WebSocket(
 function checkForToken() {
   const serverTokenCode = `
       try {
-        const {readFile} = await import('fs/promises');
-        const tokenFile = await readFile(join(ROOT, 'config/token.txt'));
+        const {readFile} = await import("fs/promises");
+        const tokenFile = await readFile(join(ROOT, "config/token.txt"));
         const token = tokenFile.toString();
-        console.log(token);
+        console.log("TOKEN: ", token);
         __result = token;
       } catch (e) {
-        console.error(e);
         __result = null;
       }`;
   socket.send(
@@ -44,6 +43,7 @@ async function askForToken() {
           await writeFile(join(ROOT, 'config/token.txt'), '${token}');
           __result = true;
         } catch (e) {
+          console.error("Unable to write token to file:");
           console.error(e);
           __result = false;
         }`;
