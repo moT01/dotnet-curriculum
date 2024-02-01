@@ -1,4 +1,6 @@
-# .NET - Introduction to ASP.NET Core Development
+# Introduction to ASP.NET Core Development
+
+This course shows you the .NET CLI development tools and walks you through creating your first ASP.NET Core app.
 
 ## 0
 
@@ -193,7 +195,11 @@ const terminalOut = await __helpers.getTerminalOutput();
 const temp = await __helpers.getTemp();
 assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
-assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
+assert(
+  !/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(
+    temp
+  )
+);
 ```
 
 ## 10
@@ -268,7 +274,9 @@ You should have the suggested code at the bottom of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "Home";\s*}/);
 ```
 
@@ -284,7 +292,9 @@ You should have the suggested code at the bottom of your `Index.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/Index.cshtml'
+);
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
@@ -354,7 +364,9 @@ You should have `builder.Services.AddRazorPages();` in your `Program.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Program.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Program.cs'
+);
 assert.match(fileContents, /builder\.Services\.AddRazorPages\(\);/);
 ```
 
@@ -370,7 +382,9 @@ You should have `app.MapRazorPages();` in your `Program.cs` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Program.cs');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Program.cs'
+);
 assert.match(fileContents, /app\.MapRazorPages\(\);/);
 ```
 
@@ -391,7 +405,11 @@ const terminalOut = await __helpers.getTerminalOutput();
 const temp = await __helpers.getTemp();
 assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
-assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
+assert(
+  !/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(
+    temp
+  )
+);
 ```
 
 ## 21
@@ -448,7 +466,9 @@ You should have the suggested code at the bottom of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /@{\s*ViewData\["Title"\] = "About";\s*}/);
 ```
 
@@ -464,7 +484,9 @@ You should have the suggested code at the bottom of your `About.cshtml` file.
 
 ```js
 await new Promise(res => setTimeout(res, 1000));
-const fileContents = await __helpers.getFile('introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml');
+const fileContents = await __helpers.getFile(
+  'introduction-to-asp-dotnet-core-development/my-first-app/Pages/About.cshtml'
+);
 assert.match(fileContents, /<p>This is the @ViewData\["Title"\] page\.<\/p>/);
 ```
 
@@ -539,7 +561,11 @@ const terminalOut = await __helpers.getTerminalOutput();
 const temp = await __helpers.getTemp();
 assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
-assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
+assert(
+  !/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(
+    temp
+  )
+);
 ```
 
 ## 29
@@ -666,7 +692,11 @@ const terminalOut = await __helpers.getTerminalOutput();
 const temp = await __helpers.getTemp();
 assert.match(lastCommand, /^\s*dotnet run/);
 assert.match(terminalOut, /Application is shutting down...\s*$/);
-assert(!/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(temp))
+assert(
+  !/Content root path: \/workspace\/dotnet-curriculum\/introduction-to-asp-dotnet-core-development\/my-first-app\s*$/.test(
+    temp
+  )
+);
 ```
 
 ## --fcc-end--
