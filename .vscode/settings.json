@@ -47,7 +47,7 @@
   "freecodecamp-courses.workspace.previews": [
     {
       "open": true,
-      "url": "https://8080-shaunshamil-dotnetcurri-ftwd7e48vyq.ws-eu107.gitpod.io",
+      "url": "http://localhost:8080",
       "showLoader": true,
       "timeout": 4000
     }

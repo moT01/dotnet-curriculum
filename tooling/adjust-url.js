@@ -13,9 +13,6 @@ if (process.env.GITPOD_WORKSPACE_URL) {
 const VSCODE_SETTINGS_PATH = '.vscode/settings.json';
 
 async function main() {
-  if (!GITPOD_WORKSPACE_URL) {
-    throw new Error('Workspace URL not found');
-  }
   const settings_file = await readFile(VSCODE_SETTINGS_PATH, 'utf-8');
   const settings = JSON.parse(settings_file);
 
