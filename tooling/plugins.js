@@ -3,21 +3,13 @@ import { ROOT } from '@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/env.js
 import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 
-pluginEvents.onTestsStart = async (project, testsState) => {
-  console.log('onTestsStart');
-};
+pluginEvents.onTestsStart = async (project, testsState) => {};
 
-pluginEvents.onTestsEnd = async (project, testsState) => {
-  console.log('onTestsEnd');
-};
+pluginEvents.onTestsEnd = async (project, testsState) => {};
 
-pluginEvents.onProjectStart = async project => {
-  console.log('onProjectStart');
-};
+pluginEvents.onProjectStart = async project => {};
 
 pluginEvents.onProjectFinished = async project => {
-  console.log('onProjectFinished');
-
   const dir = await readdir(join(ROOT, 'config'));
 
   if (dir.includes('token.txt')) {
@@ -40,10 +32,6 @@ pluginEvents.onProjectFinished = async project => {
   }
 };
 
-pluginEvents.onLessonFailed = async project => {
-  console.log('onLessonFailed');
-};
+pluginEvents.onLessonFailed = async project => {};
 
-pluginEvents.onLessonPassed = async project => {
-  console.log('onLessonPassed');
-};
+pluginEvents.onLessonPassed = async project => {};
