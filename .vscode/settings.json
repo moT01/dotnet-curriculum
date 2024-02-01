@@ -39,6 +39,18 @@
       "args": ["--init-file", "./bash/sourcerer.sh"]
     }
   },
+  "freecodecamp-courses.autoStart": true,
+  "freecodecamp-courses.prepare": "sed -i \"s#WD=.*#WD=$(pwd)#g\" ./bash/.bashrc",
+  "freecodecamp-courses.scripts.develop-course": "NODE_ENV=development npm run start",
+  "freecodecamp-courses.scripts.run-course": "NODE_ENV=production npm run start",
+  "freecodecamp-courses.workspace.previews": [
+    {
+      "open": true,
+      "url": "https://8080-shaunshamil-dotnetcurri-ftwd7e48vyq.ws-eu107.gitpod.io",
+      "showLoader": true,
+      "timeout": 4000
+    }
+  ],
   "terminal.integrated.defaultProfile.linux": "bash",
   "workbench.colorTheme": "freeCodeCamp Dark Theme"
 }
