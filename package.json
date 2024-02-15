@@ -11,8 +11,7 @@
   "dependencies": {
     "@freecodecamp/freecodecamp-os": "^3",
     "babeliser": "0.6.0",
-    "dotenv": "16.3.1",
-    "ws": "8.16.0"
+    "dotenv": "16.3.1"
   },
   "scripts": {
     "start": "node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js"
